@@ -1,6 +1,14 @@
 <?php
 require 'connection.php';
 require './layout.php';
+
+if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
+    $query = "SELECT * FROM students WHERE promo_id = " . $_GET['id'];
+    $response = $bdd->query($query);
+    $datas = $response->fetchAll();
+} else {
+    header('Location: index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,9 +46,7 @@ require './layout.php';
                             <img src="assets/img/OIG_8.jpg">
                         </div>
                         <?php
-                $query = "SELECT * FROM students WHERE promo_id = 1";
-                $response = $bdd->query($query);
-                $datas = $response->fetchAll();
+                
 
                 foreach ($datas as $data) {
                 ?>

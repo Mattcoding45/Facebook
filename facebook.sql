@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 23 nov. 2023 à 12:52
+-- Généré le : jeu. 23 nov. 2023 à 14:21
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.2.0
 
@@ -31,17 +31,18 @@ DROP TABLE IF EXISTS `promos`;
 CREATE TABLE IF NOT EXISTS `promos` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nom_promo` text NOT NULL,
+  `date_promo` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `promos`
 --
 
-INSERT INTO `promos` (`id`, `nom_promo`) VALUES
-(1, 'kappa1'),
-(2, 'kappa2'),
-(3, 'kappa3');
+INSERT INTO `promos` (`id`, `nom_promo`, `date_promo`) VALUES
+(1, 'kappa1', '2023-2024'),
+(2, 'kappa2', '2023-2024'),
+(3, 'kappa3', '2023-2024');
 
 -- --------------------------------------------------------
 
