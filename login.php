@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION['email'] = $user['email'];
                         $_SESSION['name'] = $user['name'];
                         $_SESSION['islog']= true;
-                        header('Location: logged.php');
+                        header('Location: user_profil.php');
                         exit();
                     } else {
                         
@@ -71,13 +71,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <nav class="container">
                 <div class="home">
                     <img src="assets/img/reseau.png" alt="Logo école" id="top_logo"> 
-                    <a href="index.html" title="Accueil">L'école</a>
+                    <a href="index.php" title="Accueil">L'école</a>
                 </div>
             </nav>
         </section>
         <section id="sec">
             <div class="container">
-                <h1>L'école</h1>
+                <h1>Connexion</h1>
             </div>
         </section>
 </header>

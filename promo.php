@@ -1,5 +1,4 @@
 <?php
-require 'connection.php';
 require './layout.php';
 
 if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
@@ -9,6 +8,7 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
 } else {
     header('Location: index.php');
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,11 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
     <body>
     
         <header>
-        
+        <section id="sec">
+            <div class="container">
+                <h1>promo</h1>
+            </div>
+        </section>
         </header>
 
         <main>
@@ -40,26 +44,22 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
             <section>
 
                 <div class="container" id="card_grid">
-                    
+                <?php foreach ($datas as $data) { ?>
                     <div class="card">
                         <div class="card_pic">
                             <img src="assets/img/OIG_8.jpg">
                         </div>
-                        <?php
-                
-
-                foreach ($datas as $data) {
-                ?>
-                        <div class="">
-                        <h2><?= $data['name'] . ' ' . $data['last_name'] ?></h2> 
-                        <p><?= $data['email'] ?></p>
+                        <div class="card_content">
+                        <h2><?= $data['name'] . ' ' . $data['last_name'] ?></h2>
+                        <?php if($_SESSION['islog']===true){ ?>
+                            <p><?= $data['email'] ?></p>
+                        <?php } ?>
                         <p><?= $data['date_naissance'] ?></p>
                             <button type="submit">j'aime</button>
                         </div>
-                         <?php } ?>
                     </div> 
+                    <?php } ?>
                 </div>
-
             </section>
         </main>
 
