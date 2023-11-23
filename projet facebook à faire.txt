@@ -1,0 +1,13 @@
+
+
+
+	
+	• Un user ne peux modif que sa fiche
+
+	• Admin ( ajout promo / modif & delete users )
+
+	• Tris promos ( Nom users / Age / Likes )
+
+	• Likes (  Un user like un profil qu'une fois + retrait )
+
+	• CSRF
