@@ -52,13 +52,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Erreur CSRF : Tentative de manipulation du formulaire détectée.";
 }
 }
+
 ?>
 
 <!DOCTYPE html> 
 <html lang="fr">
 <head>
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="assets/styles/login.css">
+<link rel="stylesheet" href="assets/login.css">
+<link rel="stylesheet" href="assets/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de connexion</title>
@@ -78,31 +80,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h1>L'école</h1>
             </div>
         </section>
-    </header>
+</header>
 
-<div class="login">
-    <h2 class="active">Connexion</h2>
-    
-
-    <form action="login.php" method="post">
-    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-
-
-        <div>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" class="text" required>
+<main>
+    <section class="container" id="login_grid">
+        <div class="login">
+            <h2 class="active">Connexion</h2>
             
-        </div>
 
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" class="text" required>
-            
-        </div>
+            <form action="login.php" method="post" id="login_form">
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 
-        <button class="signin" type="submit">Sign In</button>
-    </form>
-</div>
+
+                <div class="info">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" class="text" required>
+                    
+                </div>
+
+                <div class="info">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="text" required>
+                    
+                </div>
+
+                <button class="signin" type="submit">Connexion</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+
 
     
 </body>
