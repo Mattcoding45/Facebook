@@ -1,0 +1,50 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+button{
+    width: 10rem;
+    margin-top: 22px;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 0px 20px 1px var(--tertiary-color);
+}
+
+.pass{
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 5px 5px lightslategray;
+    padding: 2rem;
+    margin-top: 10%;
+    line-height: 2rem;
+    border-radius: 10px;
+}
+
+
+h2{
+    margin: 0px;
+}
+
+.profil{
+margin-top: 10%;
+background-color: var(--primary-color);
+line-height: 2rem;
+padding: 2rem;
+box-shadow: 0px 0px 5px 5px lightslategray;
+border-radius: 10px;
+}
+
+input{
+    border-radius: 10px;
+}
+
+.student_info{
+    background-color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 45%;
+    border-radius: 10px;
+    border: solid 2px  var(--tertiary-color);
+}

@@ -1,5 +1,4 @@
 <?php
-require 'connection.php';
 require './layout.php';
 
 $query = "SELECT * FROM promos";
@@ -19,7 +18,13 @@ $datas = $response->fetchAll();
 <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Kaushan+Script&family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <header>
+    <section id="sec">
+            <div class="container">
+                <h1>L'école</h1>
+            </div>
+        </section>
+    </header>
     <main>
         <section class="container">
             <div class="promo_links">
@@ -30,8 +35,8 @@ $datas = $response->fetchAll();
 
                     foreach ($datas as $data) {
                     ?>
-        <div class="">
-            <div><a href='promo.php?id=<?= $data['id'] ?>'><?= $data['nom_promo'] ?></a></div>
+        <div class="promo_card">
+            <a href='promo.php?id=<?= $data['id'] ?>'><?= $data['nom_promo'] ?></a>
             <h2><?= $data['date_promo'] ?></h2>
 
         </div>
