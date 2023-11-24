@@ -27,7 +27,7 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
         <header>
         <section id="sec">
             <div class="container">
-                <h1>promo</h1>
+                <h1>Promo</h1>
             </div>
         </section>
         </header>
