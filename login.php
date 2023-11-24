@@ -1,6 +1,7 @@
 <?php
 require 'connection.php';
 
+
 function validationEmail($email)
 {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
@@ -42,11 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Erreur : " . $e->getMessage();
             }
         } else {
-            echo "L'email n'est pas valide ou le mot de passe doit contenir au moins 8 caractères.";
+            echo "L'email n'est pas valide ou le mot de passe doit  tenir au moins 8 caractères.";
         }
     } else {
         echo "Les champs email et password ne peuvent pas être vides.";
-    }
+    } 
 } else {
 
     echo "Erreur CSRF : Tentative de manipulation du formulaire détectée.";

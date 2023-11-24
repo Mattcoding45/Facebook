@@ -16,3 +16,4 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
+require 'controllers/profil.php';
