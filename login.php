@@ -1,6 +1,7 @@
 <?php
 require 'connection.php';
 
+
 function validationEmail($email)
 {
     return filter_var($email, FILTER_VALIDATE_EMAIL);

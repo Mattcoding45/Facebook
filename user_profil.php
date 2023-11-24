@@ -1,6 +1,15 @@
 <?php
 
 require "./layout.php";
+
+if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
+    $query = "SELECT * FROM students WHERE id = " . $_GET['id'];
+    $response = $bdd->query($query);
+    $datas = $response->fetchAll();
+} else {
+    header('Location: index.php');
+}
+
 ?>
 
 

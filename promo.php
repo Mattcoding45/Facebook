@@ -56,6 +56,7 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
                         <?php } ?>
                         <p><?= $data['date_naissance'] ?></p>
                             <button type="submit">j'aime</button>
+                            <a href='user_profil.php?id=<?= $data['id'] ?>'>Modifier</a>
                         </div>
                     </div> 
                     <?php } ?>
